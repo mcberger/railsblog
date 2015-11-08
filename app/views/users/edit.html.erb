@@ -1,0 +1,12 @@
+<%= form_for @user, method: :put do |f| %>
+  <%= f.label :fname, 'First name:' %>
+  <%= f.text_field :fname %>
+  <br><br>
+  <%= f.label :lname, 'Last name:' %>
+  <%= f.text_field :lname %>
+  <br><br>
+  <%= f.label :password, 'Password:' %>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit :update  %>
+<% end %>

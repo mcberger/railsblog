@@ -1,0 +1,17 @@
+Posted by: <%= @post.user.fname + " " + @post.user.lname %>
+<br>
+Title: <%= @post.title %>
+<br>
+Body: <%= @post.body %>
+<br><br>
+<%= link_to 'Edit post', edit_post_path %>
+<%= link_to 'Delete post', post_path(@post), method: :delete %>
+<%= link_to 'Comment', new_post_comment_path(@post) %>
+
+<br><br>
+<% @post.comments.each do |comment| %>
+<%= comment.user.fname + " " + comment.user.lname %>
+<%= comment.text %> <br>
+<%= link_to 'Delete comment', post_comment_path(@post, comment), method: :delete %>
+<br><br>
+<% end %>

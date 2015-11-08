@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RailsApp2</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+
+	<% if current_user %>
+	<%= link_to 'logout', logout_path, method: 'delete' %>
+	<% else %>
+	<%= link_to 'login', login_path %>
+	<% end %>
+
+	<%= flash[:notice] if flash[:notice] %>
+	<%= flash[:alert] if flash[:alert] %>
+
+	<ul>
+		<li> <%= link_to 'Users', users_path %> </li>
+		<li> <%= link_to 'Posts', posts_path %> </li>
+	</ul>
+
+	<%= yield %>
+
+</body>
+</html>
+
