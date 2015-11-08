@@ -1,7 +1,7 @@
 <%= form_for @comment, url: post_comments_path(@post) do |f| %>
   <%= f.label :text, 'Comment:' %>
   <br>
-  <%= f.text_field :text %>
+  <%= f.text_field :text, :maxlength => 75, :size => 21 %>
   <br>
   <%= f.submit :'Post!' %>
 <% end %>

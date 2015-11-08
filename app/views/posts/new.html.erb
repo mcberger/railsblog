@@ -1,11 +1,12 @@
 <%= form_for @post do |f| %>
   <%= f.label :title, 'Title:' %> <br>
-  <%= f.text_field :title %>
+ <%= f.text_field :title, :maxlength => 45, :size => 21%>
+
   <br><br>
   <%= f.label :body, 'Body:' %> <br>
-  <%= f.text_area :body %>
+  <%= f.text_area :body, :maxlength => 150,:size => 21 %>
   <br><br>
-  IMPORTANT: you must be logged in to be able to post. 
+  IMPORTANT: you must be logged in to be able to post.
   <br><br>
   <%= f.submit :'Post!'  %>
 <% end %>
