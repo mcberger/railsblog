@@ -1,4 +1,4 @@
-Posted by: <%= @post.user.fname + " " + @post.user.lname %>
+Posted by: <%= user_link @post.user %>
 <br>
 Title: <%= @post.title %>
 <br>
@@ -10,7 +10,7 @@ Body: <%= @post.body %>
 
 <br><br>
 <% @post.comments.each do |comment| %>
-<%= comment.user.fname + " " + comment.user.lname %>
+<%= user_link comment.user %>
 <%= comment.text %> <br>
 <%= link_to 'Delete comment', post_comment_path(@post, comment), method: :delete %>
 <br><br>
