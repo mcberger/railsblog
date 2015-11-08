@@ -1,3 +1,12 @@
+README:
+
+This is our RAILBLER APP, where you can join as a user, post and comment with fellow users. If you start at the home page (/home), you can become a user and from there you can redirect to see other users or posts.
+
+Happy railbling!
+
+
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
